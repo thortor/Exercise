@@ -1,12 +1,15 @@
 <?php
 interface EngineInterface{
-	public function getHorsePower();
+	public function getHP();
+	public function newEngine();
+
 }
 interface RaceCarInterface extends EngineInterface{
-	public function getMaxV();
+	public function getVMax();
 	public function getAcceleration();
 	public function calcVelocity();
 	public function calcAcc();
-	public function calcHorsePower();
+	public function calcHP();
+
 }
 ?>

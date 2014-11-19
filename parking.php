@@ -1,18 +1,18 @@
 <?php
 
 include_once('car.php');
-include_once("racecar.php")
+include_once("racecar.php");
 
-// $car = new Car();
+//$car = new Car();
 
-// echo $car->helloCar();
+//echo $car->helloCar();
 
 $myCar = new Car("Skoda","Fabia","Silver", 5);
 $myRaceCar = new RaceCar(300,200,500);
 
 // $otherCar = new Car("FSO","Polonez","marine", 5);
 
-// echo $myCar->helloCar();
+//echo $myCar->helloCar();
 // echo $otherCar->helloCar();
 
 // echo $otherCar->getColor()."\n";
@@ -22,24 +22,29 @@ $myRaceCar = new RaceCar(300,200,500);
 // echo $myCar->helloCar();
 // echo $otherCar->helloCar();
 
-echo $myRaceCar->getMaxV();
-$myRaceCar->calcVelocity();
+// echo $myRaceCar->getVMax();
+// $myRaceCar->calcVelocity();
 
-echo $myRaceCar->getMaxV();
-echo $myRaceCar->getAcceleration();
+// echo $myRaceCar->getVMax();
+// echo $myRaceCar->getAcceleration();
 
-$myRaceCar->calcAcc();
-echo $myRaceCar->getAcceleration();
-echo $myRaceCar->getHorsePower();
+// $myRaceCar->calcAcc();
+// echo $myRaceCar->getAcceleration();
+// echo $myRaceCar->getHP();
 
-$myRaceCar->calcHorsePower();
-echo $myRaceCar->getHorsePower();
+// $myRaceCar->calcHP();
+// echo $myRaceCar->getHP();
 
-public function introduceCar(Car $c){
-	echo "Hello! It's me - your car: ".$c->getColor()." ".$c->getBrand()." ".$c->getModel()." ".$c->getNoOfDoors()."\n"
-		"I have".$c->getHorsePower." horse power,".$c->getAcceleration." - Velocity, and my acceleration is equal to: ".$c->getAcceleration.;
+
+
+function introduceCar(Car $c){
+	return "Hello! It's me - your car: ".$c->getColor(). " ".$c->getBrand()." ".$c->getModel()." ".$c->getNumberOfDoors()."\n";
 }
+echo introduceCar($myCar);
 
+echo "My Horse Power is equal to : " . $myRaceCar->getHP() . "\n";
+echo "My Maximum velocity is equal to: " . $myRaceCar->getVMax() . "\n";
+echo "My Acceleration is equal to: " . $myRaceCar->getAcceleration() . "\n";
 
 
 ?>
